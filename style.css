@@ -1,0 +1,1224 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   HTML & BODY
+========================================= */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Cormorant Garamond", serif;
+
+    color: #59413b;
+
+    overflow: hidden;
+
+    /* Custom cursor */
+    cursor: none;
+}
+
+
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.page {
+    width: 100%;
+    height: 100vh;
+
+    min-height: 650px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    /*
+       BACKGROUND UTAMA
+       File: background1.jpg
+    */
+
+    background-image:
+        linear-gradient(
+            rgba(255, 245, 245, 0.12),
+            rgba(255, 245, 245, 0.12)
+        ),
+        url("background1.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* =========================================
+   SOFT OVERLAY
+========================================= */
+
+.page::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        rgba(255, 245, 245, 0.12);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+/* =========================================
+   MAIN ROMANCE FRAME
+========================================= */
+
+.romance-frame {
+    width: min(850px, 86vw);
+
+    height: min(600px, 82vh);
+
+    min-height: 500px;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 60px 70px 40px;
+
+    /*
+       Ivory paper effect
+    */
+
+    background:
+        rgba(255, 252, 247, 0.93);
+
+    border: 1px solid #a88a70;
+
+    outline:
+        1px solid rgba(168, 138, 112, 0.55);
+
+    outline-offset: -12px;
+
+    box-shadow:
+        0 18px 50px rgba(99, 66, 66, 0.22);
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   INNER FRAME
+========================================= */
+
+.romance-frame::before {
+    content: "";
+
+    position: absolute;
+
+    top: 24px;
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+
+    border:
+        1px solid rgba(168, 138, 112, 0.35);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   CORNER ORNAMENTS
+========================================= */
+
+.corner {
+    position: absolute;
+
+    color: #8f7066;
+
+    font-size: 50px;
+
+    opacity: 0.8;
+
+    z-index: 5;
+}
+
+.top-left {
+    top: 3px;
+    left: 12px;
+}
+
+.top-right {
+    top: 3px;
+    right: 12px;
+
+    transform: scaleX(-1);
+}
+
+.bottom-left {
+    bottom: 3px;
+    left: 12px;
+
+    transform: scaleY(-1);
+}
+
+.bottom-right {
+    bottom: 3px;
+    right: 12px;
+
+    transform: rotate(180deg);
+}
+
+
+/* =========================================
+   TOP ORNAMENT
+========================================= */
+
+.ornament {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #9d806c;
+
+    font-size: 17px;
+
+    z-index: 3;
+}
+
+.line {
+    width: 55px;
+
+    height: 1px;
+
+    background: #b49a80;
+}
+
+
+/* =========================================
+   OPENING CONTENT
+========================================= */
+
+.opening-content {
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    z-index: 3;
+}
+
+
+/* =========================================
+   JUST FOR YOU
+========================================= */
+
+.eyebrow {
+    margin-bottom: 20px;
+
+    font-size: 14px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    color: #92756c;
+}
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+h1 {
+    font-size: clamp(42px, 6vw, 70px);
+
+    line-height: 0.95;
+
+    font-weight: 500;
+
+    letter-spacing: 4px;
+
+    color: #563f3b;
+}
+
+h1 span {
+    display: inline-block;
+
+    margin-top: 8px;
+
+    font-size: 0.65em;
+
+    font-weight: 600;
+
+    letter-spacing: 5px;
+
+    color: #7e4e54;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.divider {
+    display: flex;
+
+    align-items: center;
+
+    margin: 25px 0 15px;
+
+    color: #9d806c;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+
+    width: 65px;
+
+    height: 1px;
+
+    background: #b49a80;
+}
+
+.divider span {
+    margin: 0 12px;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   DEDICATION
+========================================= */
+
+.dedication {
+    font-family: "Great Vibes", cursive;
+
+    font-size: 32px;
+
+    color: #9a5d67;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.message {
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    letter-spacing: 1px;
+
+    color: #654e48;
+}
+
+
+/* =========================================
+   OPEN BUTTON
+========================================= */
+
+#openButton {
+    margin-top: 32px;
+
+    padding: 13px 30px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 15px;
+
+    letter-spacing: 4px;
+
+    color: #704c4d;
+
+    background:
+        rgba(255, 250, 245, 0.95);
+
+    border:
+        1px solid #a88969;
+
+    cursor: none;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        letter-spacing 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+#openButton:hover {
+    background: #fffdf9;
+
+    transform: translateY(-3px);
+
+    letter-spacing: 5px;
+
+    box-shadow:
+        0 8px 20px rgba(112, 76, 77, 0.16);
+}
+
+#openButton:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   BOTTOM TEXT
+========================================= */
+
+.bottom-text {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: #9f816c;
+
+    opacity: 0.85;
+
+    z-index: 3;
+}
+
+.bottom-text p {
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+}
+
+.bottom-text span {
+    font-size: 18px;
+}
+
+
+/* =========================================
+   CUSTOM WHITE CURSOR
+========================================= */
+
+.custom-cursor {
+    position: fixed;
+
+    width: 11px;
+    height: 11px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.95);
+
+    box-shadow:
+        0 0 6px rgba(255, 255, 255, 1),
+        0 0 13px rgba(255, 220, 230, 0.9);
+
+    pointer-events: none;
+
+    transform:
+        translate(-50%, -50%);
+
+    z-index: 9999;
+}
+
+
+/* =========================================
+   CURSOR SPARKLE
+========================================= */
+
+.cursor-sparkle {
+    position: fixed;
+
+    pointer-events: none;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    z-index: 9998;
+
+    transform:
+        translate(-50%, -50%);
+
+    animation:
+        sparkleFade 0.7s ease-out forwards;
+}
+
+
+@keyframes sparkleFade {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.3)
+            rotate(0deg);
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translate(
+                calc(-50% + var(--sparkle-x)),
+                calc(-50% + var(--sparkle-y))
+            )
+            scale(1.4)
+            rotate(45deg);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        cursor: auto;
+    }
+
+    .custom-cursor,
+    .cursor-sparkle {
+        display: none;
+    }
+
+
+    .page {
+        min-height: 600px;
+    }
+
+
+    .romance-frame {
+        width: 90vw;
+
+        height: 78vh;
+
+        min-height: 500px;
+
+        padding:
+            50px 25px 35px;
+    }
+
+
+    .romance-frame::before {
+        top: 18px;
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
+    }
+
+
+    .corner {
+        font-size: 35px;
+    }
+
+
+    .branch {
+        transform: scale(0.7);
+    }
+
+
+    .line {
+        width: 30px;
+    }
+
+
+    .eyebrow {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+
+    h1 {
+        font-size: 40px;
+    }
+
+
+    h1 span {
+        font-size: 0.62em;
+
+        letter-spacing: 3px;
+    }
+
+
+    .dedication {
+        font-size: 27px;
+    }
+
+
+    .message {
+        font-size: 16px;
+    }
+
+
+    #openButton {
+        padding: 12px 23px;
+    }
+}
+
+
+/* ==============================
+   PAGE 2
+============================== */
+
+.page2-body {
+    min-height: 100vh;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.page2 {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 55px 20px 90px;
+}
+
+.page2-card {
+    width: min(1050px, 94vw);
+
+    background: rgba(255, 249, 244, 0.92);
+
+    border: 1px solid rgba(145, 96, 96, 0.45);
+
+    box-shadow:
+        0 20px 60px rgba(67, 36, 38, 0.22);
+
+    padding: 75px 80px;
+
+    position: relative;
+}
+
+.page2-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 18px;
+
+    border: 1px solid rgba(145, 96, 96, 0.25);
+
+    pointer-events: none;
+}
+
+/* ==========================================
+   PAGE 2 TITLE — FINAL
+========================================== */
+
+body {
+    font-family: "Cormorant Garamond", serif;
+
+    color: #6f565a;
+
+    background:
+        url("background1.jpg")
+        center center / cover
+        fixed no-repeat;
+
+    background-color: #f8eee9;
+}
+
+.page2-header {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page2-header .eyebrow {
+    text-align: center;
+    color: #a16e73;
+}
+
+.page2-header h1 {
+    width: 100%;
+    margin: 0 auto;
+
+    font-family: "Bodoni Moda", serif;
+    font-size: clamp(48px, 7vw, 78px);
+    font-weight: 600;
+
+    line-height: 0.95;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    text-align: center;
+
+    /* SATU WARNA */
+    color: #7d4e54 !important;
+}
+
+.page2-header h1 span {
+    display: block;
+    width: 100%;
+
+    margin: 8px auto 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(38px, 5vw, 56px);
+    font-weight: 500;
+    font-style: italic;
+
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    text-align: center;
+
+    /* WARNA SAMA */
+    color: #7d4e54 !important;
+}
+
+.page2-header .divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page2-header .intro {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page2-header .scroll-hint {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+.intro {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 18px;
+
+    font-style: italic;
+
+    color: #795c60;
+}
+
+.scroll-hint {
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #9b7074;
+
+    opacity: 0.7;
+}
+
+.scroll-hint span:last-child {
+    font-size: 21px;
+
+    animation: scrollDown 1.5s ease-in-out infinite;
+}
+
+@keyframes scrollDown {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: translateY(7px);
+        opacity: 1;
+    }
+}
+
+
+/* ==============================
+   LOVE ITEMS
+============================== */
+
+.love-item {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 55px;
+
+    margin-bottom: 115px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.love-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.photo-box {
+    width: 48%;
+
+    flex-shrink: 0;
+
+    padding: 11px;
+
+    background: #fffaf5;
+
+    border: 1px solid rgba(145, 96, 96, 0.5);
+
+    box-shadow:
+        0 12px 25px rgba(67, 36, 38, 0.18);
+
+    transform: rotate(-1deg);
+
+    transition: 0.4s ease;
+}
+
+.reverse .photo-box {
+    transform: rotate(1deg);
+}
+
+.photo-box:hover {
+    transform: rotate(0deg) translateY(-4px);
+}
+
+.photo-box img {
+    width: 100%;
+
+    display: block;
+
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+}
+
+.love-text {
+    flex: 1;
+}
+
+.love-text h2 {
+    font-family: "Great Vibes", cursive;
+
+    font-size: 40px;
+
+    font-weight: 400;
+
+    color: #87585d;
+
+    margin-bottom: 12px;
+}
+
+.love-text p {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 17px;
+
+    line-height: 1.65;
+
+    color: #665456;
+}
+
+
+/* ==============================
+   ENDING
+============================== */
+
+/* divider */
+
+.divider {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+
+    margin: 0 auto 28px;
+
+    text-align: center;
+}
+
+.divider::before
+.divider::after {
+    content: "";
+
+    width: 55px;
+    height: 1px;
+
+    background: #b99195;
+
+    flex: 0 0 55px;
+}
+
+.divider span {
+    color: #a77b80;
+}
+
+
+.ending {
+    max-width: 720px;
+
+    margin: 20px auto 0;
+
+    text-align: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+.ending p {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 22px;
+
+    line-height: 1.6;
+
+    font-style: italic;
+
+    color: #76585b;
+}
+
+.signature {
+    display: block;
+
+    margin-top: 18px;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 33px;
+
+    color: #96676b;
+}
+
+.back-area {
+    text-align: center;
+
+    margin-top: 45px;
+
+    position: relative;
+    z-index: 3;
+}
+
+#backButton {
+    display: inline-block;
+
+    padding: 10px 28px;
+
+    border: 1px solid rgba(137, 93, 88, 0.55);
+
+    background: rgba(255, 250, 245, 0.85);
+
+    text-decoration: none;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 16px;
+
+    letter-spacing: 2px;
+
+    color: #795357;
+
+    transition: 0.3s ease;
+}
+
+#backButton:hover {
+    background: #f0d7d5;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 800px) {
+
+    .page1 {
+        padding: 15px;
+    }
+
+    .page1-card {
+        min-height: 620px;
+
+        padding: 55px 30px;
+    }
+
+    .page2 {
+        padding: 15px 10px 60px;
+    }
+
+    .page2-card {
+        padding: 55px 35px;
+    }
+
+    .love-item,
+    .love-item.reverse {
+        flex-direction: column;
+
+        gap: 30px;
+
+        margin-bottom: 85px;
+    }
+
+    .photo-box {
+        width: 78%;
+    }
+
+    .love-text {
+        width: 85%;
+
+        text-align: center;
+    }
+
+    .love-text h2 {
+        text-align: center;
+    }
+
+    .love-text p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .page1 {
+        padding: 8px;
+    }
+
+    .page1-card {
+        width: 96vw;
+
+        min-height: 600px;
+
+        padding: 50px 20px;
+    }
+
+    .page1-card::before {
+        inset: 10px;
+    }
+
+    .page1 h1 {
+        font-size: 55px;
+    }
+
+    .page1 h1 span {
+        font-size: 29px;
+
+        letter-spacing: 1px;
+    }
+
+    .message {
+        font-size: 17px;
+    }
+
+    .page2 {
+        padding: 8px 6px 50px;
+    }
+
+    .page2-card {
+        width: 98vw;
+
+        padding: 50px 20px;
+    }
+
+    .page2-card::before {
+        inset: 10px;
+    }
+
+    .page2-header h1 {
+        font-size: 53px;
+    }
+
+    .page2-header h1 span {
+        font-size: 29px;
+
+        letter-spacing: 1px;
+    }
+
+    .photo-box {
+        width: 100%;
+    }
+
+    .love-text {
+        width: 100%;
+    }
+
+    .love-text h2 {
+        font-size: 34px;
+    }
+
+    .love-text p {
+        font-size: 15.5px;
+    }
+
+    .ending p {
+        font-size: 19px;
+    }
+
+    .signature {
+        font-size: 29px;
+    }
+}
+
+/* ==========================================
+   CUTE CUSTOM CURSOR
+========================================== */
+
+* {
+    cursor: none !important;
+}
+
+.custom-cursor {
+    position: fixed;
+
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid #f0a5d1;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 99999;
+
+    transform: translate(-50%, -50%);
+
+    box-shadow:
+        0 0 8px rgba(255, 245, 240, 0.9),
+        0 0 16px rgba(255, 220, 220, 0.55);
+
+    transition:
+        width 0.15s ease,
+        height 0.15s ease,
+        background 0.15s ease;
+}
+
+.custom-cursor::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: -13px;
+    left: 8px;
+
+    font-size: 10px;
+
+    color: #fb8ece;
+
+    text-shadow:
+        0 0 7px rgba(255, 255, 255, 1);
+}
+
+
+/* sparkle trail */
+
+.cursor-sparkle {
+    position: fixed;
+
+    width: 5px;
+    height: 5px;
+
+    pointer-events: none;
+
+    z-index: 99998;
+
+    color: #f97fca;
+
+    font-size: 9px;
+
+    line-height: 1;
+
+    transform: translate(-50%, -50%);
+
+    animation: sparkleFade 0.7s ease-out forwards;
+
+    text-shadow:
+        0 0 7px white,
+        0 0 12px #f5d7d7;
+}
+
+
+@keyframes sparkleFade {
+
+    0% {
+        opacity: 1;
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translate(-50%, -75%)
+            scale(0.2);
+    }
+
+}
+
+
+/* cursor membesar saat hover tombol/link */
+
+button:hover ~ .custom-cursor,
+a:hover ~ .custom-cursor {
+    width: 21px;
+    height: 21px;
+}
